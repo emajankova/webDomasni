@@ -1,0 +1,149 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Domasna Zadaca 1</title>
+        <link rel="stylesheet" href="domasna2.css">
+    </head>
+    <body>
+        <header>  
+            <h1>Kontrolen panel za pameten dom</h1>
+        </header>
+        <nav>
+        <h2>Navigacisko meni za sobi:</h2>
+        <ul>
+            <li><a href="#spalna">Spalna soba</a></li>
+            <li><a href="#dnevna">Dnevna soba</a></li>
+            <li><a href="#kujna">Kujna</a></li>
+            <li><a href="#gradina">Gradina</a></li>
+            <li><a href="#notifikacii">Notifikacii</a></li>
+        </ul>
+    </nav>
+        <section id="spalna">
+            <h2>1.Spalna soba</h2>
+
+            <h3>Senzor za merenje na temperatura</h3>
+            <p>Izmerena temperatura:<strong>22&deg;C</strong></p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:79%</p>
+            <p>Dozvolena temperatura:18-24&deg;C</p>
+
+            <h3>Senzor za merenje vlaznost na vozduh</h3>
+            <p>Izmerena vlaznost:<em>44%</em></p>
+            <p>Status:Isklucen</p>
+            <p>Baterija:94%</p>
+            <p>Dozvolena vlaznost:30-60%</p>
+
+            <h3>Senzor za merenje na zvuk</h3>
+            <p>Izmeren zvuk:<mark>65dB</mark></p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:63%</p>
+            <p>Dozvoleno nivo na zvuk:0-50dB</p>
+        </section>
+
+        <section id="dnevna">
+            <h2>2.Dnevna soba</h2>
+
+            <h3>Senzor za merenje na temperatura</h3>
+            <p>Temperatura:<input type="number" value="25" disabled>&deg;C</p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:88%</p>
+            <p>Dozvolena temperatura:20-24&deg;C</p>
+
+            <h3>Senzor za detekcija na dvizenje</h3>
+            <p>Detektirano dvizenje:<strong>da</strong></p>
+            <p>Vreme na detekcija:<time>14:30</time></p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:95%</p>
+            <p>Dozvoleno dvizenje:Dvizenje ne e dozvoleno od 00:00 do 06:00</p>
+
+            <h3>Senzor za kvalitet na vozduh</h3>
+            <p>Kvalitet na vozduh:74/100</p>
+            <input type="range" min="0" max="100" value="74" disabled>
+            <p>Status:Vklucen</p>
+            <p>Baterija:86%</p>
+            <p>Dozvolena vrednost:50-100</p>
+        </section>
+
+        <section id="kujna">
+            <h2>3.Kujna</h2>
+
+            <h3>Senzor za gas</h3>
+            <p>Koncentracija na gas:<strong>80ppm</strong></p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:62%</p>
+            <p>Dozvolena koncentracija na gas:0-50ppm</p>
+
+            <h3>Senzor za dim</h3>
+            <p>Detekcija na dim:<mark>DA</mark></p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:49%</p>
+            <p>Pravilo:Ne smee da ima detektiran dim</p>
+
+            <h3>Senzor za merenje temperatura</h3>
+            <p>Temperatura:23&deg;C</p>
+            <input type="range" min="0" max="40" value="23" disabled>
+            <p>Status:Vklucen</p>
+            <p>Baterija:77%</p>
+            <p>Dozvolena temperatura:18-28&deg;C</p>
+        </section>
+
+        <section id="gradina">
+            <h2>4.Gradina</h2>
+
+            <h3>Senzor za detekcija na dvizenje</h3>
+            <p>Detektirano dvizenje:<input type="checkbox" checked disabled>DA</p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:65%</p>
+            <p>Dozvoleno dvizenje:Dozvoleno e dvizenje vo gradinata</p>
+
+            <h3>Senzor za merenje nadvoresna temperatura</h3>
+            <p>Temperatura:<em>18&deg;C</em></p>
+            <p>Status:Vklucen</p>
+            <p>Baterija:78%</p>
+            <p>Dozvolena temperatura:5-35&deg;C</p>
+
+            <h3>Senzor za dozd</h3>
+            <p>Detekcija na dozd:<strong>NE</strong></p>
+            <p>Status:Isklucen</p>
+            <p>Baterija:58%</p>
+            <p>Pravilo:Navodnuvanjeto na gradinata treba da bide iskluceno koga vrne dozd.</p>
+        </section>
+
+        <section id="notifikacii">
+
+            <h2>5.Notifikacii</h2>
+            <details>
+                <summary>Predupreduvanje:Zgolemeno nivo na zvuk vo spalnata soba</summary>
+                <p>Izmereno nivo na zvuk:65dB.</p>
+                <p>Dozvoleno nivo na zvuk:0-50dB.</p>
+                <p>Nivoto na zvuk e nad dozvolenata granica.</p>
+            </details>
+
+            <details>
+                <summary>Predupreduvanje:Visoka temperatura vo dnevnata soba</summary>
+                <p>Momentalna temperatura:25&deg;C.</p>
+                <p>Dozvolena temperatura:20-24&deg;C.</p>
+                <p>Temperaturata e nad dozvolenata granica.</p>
+            </details>
+
+            <details>
+                <summary>Opasnost:Zgolemena koncentracija na gas vo kujna</summary>
+                <p>Izmerena koncentracija:80 ppm.</p>
+                <p>Dozvolena koncentracija:0-50 ppm.</p>
+                <p>Koncentracijata na gas e nad dozvolenata vrednost.</p>
+            </details>
+
+            <details>
+                <summary>Opasnost:Detektiran dim vo kujna</summary>
+                <p>Senzorot detektiral prisustvo na dim.</p>
+            </details>
+
+            <details>
+                <summary>Informacija:Iskluceni senzori</summary>
+                <p>Senzorot za dozd vo gradinata e isklucen.</p>
+                <p>Senzorot za merenje vlaznost na vozduhot vo spalnata soba e isklucen. </p>
+            </details>
+        </section>
+    </body>
+</html>

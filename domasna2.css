@@ -1,0 +1,35 @@
+h1 {
+    color:black;
+    text-align:center;
+    font-size:32px;
+    background-color:lightblue;
+    text-shadow:2px 2px 4px gray;
+    border-radius:12px;
+}
+h2 {
+    color:mediumvioletred;
+    background-color:pink;
+    border-radius:10px;
+    padding: 9px;
+}
+h3 {
+    color:darkblue;
+    font-weight:bold;
+    border-bottom:2px solid lightblue;
+    text-shadow:2px 2px 4px gray;
+}
+p {
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    margin-left:15px;
+}
+summary {
+    background-color:lightgrey;
+    color:darkred;
+    padding:10px;
+}
+details {
+    background-color:lavender;
+    border:2px solid darkred;
+    margin-bottom:10px;
+}
