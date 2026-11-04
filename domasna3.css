@@ -1,0 +1,34 @@
+body{
+    font-family:Arial, sans-serif;
+    text-align:center;
+    background-color:lightblue;
+}
+
+h1 { color:darkblue;
+     text-shadow: 2px 2px 4px gray;
+}
+
+button{  
+    padding:10px 20px;
+    border-radius:20px;
+}
+
+button:hover {
+    background-color: lightpink;
+}
+
+h2 { color:rgb(172, 8, 63);
+    text-shadow: 2px 2px 4px gray;
+}
+
+table{
+    margin:20px auto;
+    background-color:white;
+}
+
+th,td {
+    border:1px solid black;
+    padding:10px;
+}
+
+th { background-color:lightgray;}
