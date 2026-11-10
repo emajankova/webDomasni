@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="proekt1.css">
+</head>
+<body>
+
+<header>
+    <h1>Travel Planner App</h1>
+    <nav>
+        <a href="#pocetna">Почетна</a>
+        <a href="#destinacii">Дестинации</a>
+        <a href="#galerija">Галерија</a>
+        <a href="#blog">Блог</a>
+        <a href="#anketa">Анкета</a>
+    </nav>
+
+    <div id="najava">
+        <input type="text" id="korisnik" placeholder="username">
+        <input type="password" id="lozinka" placeholder="password">
+
+        <button class="btn btn-primary" onclick="najava()">Најава</button>
+        <button class="btn btn-danger" onclick="odjava()">Одјава</button>
+    </div>
+
+    <p id="poraka"></p>
+    
+</header>
+
+<main class="container">
+
+    <section id="pocetna">
+        <div class="jumbotron text-center">
+            <h2>Welcome to Travel Planner App!</h2>
+            <p><b>Избери дестинација и планирај го своето следно патување!</b></p>
+            <a href="#destinacii" class="btn btn-info">Истражи дестинации</a>
+        </div>
+    </section>
+
+    <section id="destinacii">
+        <h2>1. Дестинации</h2>
+        <h4>Филтрирај дестинации:</h4>
+
+        <label>Категорија:</label>
+        <select id="kategorija" onchange="prikaziGradovi()">
+            <option value="Site">Сите</option>
+            <option value="Grad">Град</option>
+            <option value="More">Море</option>
+            <option value="Ezero">Езеро</option>
+            <option value="Planina">Планина</option>
+        </select>
+
+        <label>Максимален дневен буџет:</label>
+        <input type="number" id="budzet" placeholder="€" oninput="prikaziGradovi()">
+
+        <div class="row" id="listaGradovi">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="paris.jpeg">
+                    <div class="card-body">
+                        <h3>Париз</h3>
+                        <p>Држава: Франција</p>
+                        <p>Категорија: Град</p>
+                        <p>Дневен буџет: 90 €</p>
+                        <button class="btn btn-primary" onclick="otvoriGrad(0)">Отвори град</button>
+                        <button class="btn btn-danger" onclick="izbrisiGrad(0)">Избриши град</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top"
+                         src="rim.jpeg">
+                    <div class="card-body">
+                        <h3>Рим</h3>
+                        <p>Држава: Италија</p>
+                        <p>Категорија: Град</p>
+                        <p>Дневен буџет: 80 €</p>
+                        <button class="btn btn-primary" onclick="otvoriGrad(1)">Отвори град</button>
+                        <button class="btn btn-danger" onclick="izbrisiGrad(1)">Избриши град</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top"
+                         src="ohrid.jpeg">
+                    <div class="card-body">
+                        <h3>Охрид</h3>
+                        <p>Држава: Македонија</p>
+                        <p>Категорија: Град, Езеро</p>
+                        <p>Дневен буџет: 45 €</p>
+                        <button class="btn btn-primary" onclick="otvoriGrad(2)">Отвори град</button>
+                        <button class="btn btn-danger" onclick="izbrisiGrad(2)">Избриши град</button>
+                    </div>
+                </div>
+            </div>
+
+<div class="col-md-4">
+    <div class="card">
+        <img class="card-img-top" src="kopaonik.jpeg">
+        <div class="card-body">
+            <h3>Копаоник</h3>
+            <p>Држава: Србија</p>
+            <p>Категорија: Планина</p>
+            <p>Дневен буџет: 65 €</p>
+            <button class="btn btn-primary" onclick="otvoriGrad(3)">Отвори град</button>
+            <button class="btn btn-danger" onclick="izbrisiGrad(3)">Избриши град</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card">
+        <img class="card-img-top" src="grcija.jpeg">
+        <div class="card-body">
+            <h3>Атина</h3>
+            <p>Држава: Грција</p>
+            <p>Категорија: Град, Море</p>
+            <p>Дневен буџет: 70 €</p>
+            <button class="btn btn-primary" onclick="otvoriGrad(4)">Отвори град</button>
+            <button class="btn btn-danger" onclick="izbrisiGrad(4)">Избриши град</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card">
+        <img class="card-img-top" src="hrvatska.jpeg">
+        <div class="card-body">
+            <h3>Сплит</h3>
+            <p>Држава: Хрватска</p>
+            <p>Категорија: Град, Море</p>
+            <p>Дневен буџет: 85 €</p>
+            <button class="btn btn-primary" onclick="otvoriGrad(5)">Отвори град</button>
+            <button class="btn btn-danger" onclick="izbrisiGrad(5)">Избриши град</button>
+        </div>
+    </div>
+</div>
+</div>
+
+        <h4>Додади нова дестинација:</h4>
+        <form onsubmit="dodadiGrad(event)">
+            <input type="text" id="imeGrad" placeholder="Име на град" required>
+            <input type="text" id="drzavaGrad" placeholder="Држава" required>
+
+            <select id="novaKategorija">
+                <option value="Grad">Град</option>
+                <option value="More">Море</option>
+                <option value="Ezero">Езеро</option>
+                <option value="Planina">Планина</option>
+            </select>
+
+            <input type="number" id="cenaGrad" placeholder="Дневен буџет" min="1" required>
+            <input type="url" id="slikaGrad" placeholder="линк до слика">
+            <button class="btn btn-secondary">Додади</button>
+        </form>
+
+        <h4>Пресметка на патни трошоци:</h4>
+        <label>Дестинација:</label>
+        <select id="izborGrad"></select>
+
+        <label>Број на денови:</label>
+        <input type="number" id="denovi" value="3" min="1">
+        <label>Превоз (€):</label>
+        <input type="number" id="prevoz" value="50" min="0">
+        <button class="btn btn-secondary" onclick="presmetaj()">Пресметај</button>
+        <div id="rezultat"></div>
+    </section>
+
+    <section id="galerija">
+        <h2>2. Галерија</h2>
+        <h4>Избери град за да видиш повеќе слики:</h4>
+
+        <div id="galerijaGradovi" class="row"></div>
+        <div id="detaliGalerija" class="skrieno">
+            <h3 id="naslovGalerija"></h3>
+            <div id="slikiGalerija" class="row"></div>
+
+            <button class="btn btn-success" onclick="glasaj('like')">
+                Like <span class="badge badge-success" id="brojLike">0</span>
+            </button>
+        
+            <button class="btn btn-danger" onclick="glasaj('dislike')">
+                Dislike <span class="badge badge-danger" id="brojDislike">0</span>
+            </button>
+            
+            <h4>Коментари:</h4>
+            <div id="komentari"></div>
+
+            <input type="text" id="novKomentar" placeholder="Напиши коментар">
+            <button class="btn btn-secondary" onclick="dodadiKomentar()">Коментирај</button>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>3. Блог / Водич</h2>
+        <p><em>Откријте ги најубавите места, знаменитости и атракции во вашата омилена дестинација.</em></p>
+        
+        <label>Избери град:</label>
+        <select id="blogGrad" onchange="prikaziBlog()"></select>
+
+        <div class="card">
+            <div class="card-body">
+                <h3 id="blogNaslov"></h3>
+                <p id="blogDrzava"></p>
+                <p id="blogCena"></p>
+
+                 <h4>Места кои вреди да ги посетите:</h4>
+                 <div id="blogLista"></div>
+
+                <h4>Совет за патување:</h4>
+                <p id="blogSovet"></p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="anketa">
+        <h2>4. Анкета за посетителите</h2>
+        <p><em>Споделете го вашето мислење и помогнете ни да ја подобриме нашата страна!</em></p>
+
+        <form onsubmit="ispratiAnketa(event)">
+            <p>Име и презиме:</p>
+            <input type="text" id="ime" required>
+
+            <p>Возраст:</p>
+            <input type="number" max="100" min="1">
+
+            <p>Како ви се допаѓа страната?</p>
+            <select id="ocenka">
+                <option>Многу ми се допаѓа</option>
+                <option>Ми се допаѓа</option>
+                <option>Може да се подобри</option>
+                <option>Воопшто не ми се допаѓа</option>
+            </select>
+
+            <p>Дали повторно би ја користеле страната за пребарување дестинации?</p>
+            <label>
+                <input type="radio" name="povtorno" value="Да" checked> Да
+            </label>
+            <label>
+                <input type="radio" name="povtorno" value="Не"> Не
+            </label>
+
+            <p>Што ви остави најголем впечаток?</p>
+            <textarea id="mislenje"></textarea>
+
+            <p>Дали имате дополнителни идеи како би ја подобриле страната?</p>
+            <textarea id="idei"></textarea>
+
+            <button class="btn btn-info">Испрати</button>
+        </form>
+
+        <p id="porakaAnketa"></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Travel Planner App 2026</p>
+</footer>
+
+<script src="proekt1.js"></script>
+</body>
+</html>
